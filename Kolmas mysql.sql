@@ -1,4 +1,4 @@
-
+SELECT * FROM d110079sd465665.orders;
 INSERT INTO clients (username, first_name, last_name, email, address)
 VALUES ("patr1c", "Karl-Patric", "Rohi", "Karl-Patric.rohi@ametikool.ee", "Nõmpa küla Männiku talu");
 UPDATE books
