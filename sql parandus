@@ -1,0 +1,1 @@
+SELECT SUM(books.price), clients.first_name, clients.last_name FROM clients LEFT JOIN orders ON orders.client_id = clients.id LEFT JOIN books ON orders.book_id = books.id GROUP BY clients.id ORDER BY SUM(books.price) DESC;
