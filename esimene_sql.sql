@@ -4,4 +4,4 @@ SELECT count(*) as "Tellimuste arv" , year(order_date) as "aasta" FROM orders wh
 SELECT ROUND(SUM(price),2) as "ÜMARDATUD" FROM orders LEFT JOIN books ON orders.book_id = books.id GROUP BY YEAR(order_date);
 SELECT count(*), SUM(books.price) FROM orders LEFT JOIN books ON orders.book_id = books.id WHERE YEAR(order_date) = 2017;
 SELECT  count(*), SUM(books.price), clients.username FROM clients LEFT JOIN orders ON orders.client_id = clients.id LEFT JOIN books ON orders.book_id = books.id WHERE year(orders.order_date) = 2017 GROUP BY clients.id ORDER BY SUM(books.price) DESC;
-SELECT title, count(*) FROM d110072_raamatud.orders LEFT JOIN books ON orders.book_id = books.id WHERE YEAR (order_date) = 2017 GROUP BY books.id ORDER BY count(*) desc LIMIT 10;
+SELECT title, count(*) FROM d110079_raamatud.orders LEFT JOIN books ON orders.book_id = books.id WHERE YEAR (order_date) = 2017 GROUP BY books.id ORDER BY count(*) desc LIMIT 10;
